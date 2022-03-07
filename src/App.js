@@ -1,62 +1,45 @@
+import { makeStyles } from "@material-ui/core/styles";
+import { TextField,Input, Button } from "@material-ui/core";
+import { useState } from "react";
+import "./App.css"
 
 function App() {
+  const[username,setUsername]=useState('')
+  const[password,setPassword]=useState('')
   return (
     <>
-    <main class="max-w-4xl mx-auto">
-
-  <div class="flex">
-<p class="m-5 text-green-900 ">
-  Bender, quit destroying the universe! Yeah, I do that with my stupidness. I never loved you. Moving along…
-  Belligerent and numerous.
-</p>
-<button class="text-white m-5 font-bold bg-green-900 hover:bg-purple-800 py-2 px-8 rounded">
-  Party with Slurm!
-</button>
-</div>
-<ol class="list-decimal list-inside my-5 pl-2">
-  <li>rajesh</li>
-  <li>rajesh</li>
-  <li>rajesh</li>
-  <li>rajesh</li>
-</ol>
-<ol>
-  <li>rajesh</li>
-  <li>rajesh</li>
-  </ol>
-  </main>
-  <main class="max-w-4xl mx-auto">
-  <div className="text-gray-700 text-center flex items-center align-items">
-    <div>
-    i am rajesh   i am rajesh   i am rajesh  i am rajesh     i am rajesh   i am rajesh   i am rajesh  i am rajesh 
-    i am rajesh   i am rajesh   i am rajesh  i am rajesh 
-    i am rajesh   i am rajesh   i am rajesh  i am rajesh     i am rajesh   i am rajesh   i am rajesh  i am rajesh 
-    i am rajesh   i am rajesh   i am rajesh  i am rajesh 
-    i am rajesh   i am rajesh   i am rajesh  i am rajesh </div>
-    <div>
-    i am rajesh   i am rajesh   i am rajesh  i am rajesh     i am rajesh   i am rajesh   i am rajesh  i am rajesh 
-    i am rajesh   i am rajesh   i am rajesh  i am rajesh 
-    i am rajesh   i am rajesh   i am rajesh  i am rajesh 
-    i am rajesh   i am rajesh   i am rajesh  i am rajesh 
-    i am rajesh   i am rajesh   i am rajesh  i am rajesh 
-    </div>
-    <div>
-    i am rajesh   i am rajesh   i am rajesh  i am rajesh     i am rajesh   i am rajesh   i am rajesh  i am rajesh 
-    i am rajesh   i am rajesh   i am rajesh  i am rajesh 
-    i am rajesh   i am rajesh   i am rajesh  i am rajesh 
-    i am rajesh   i am rajesh   i am rajesh  i am rajesh 
-    i am rajesh   i am rajesh   i am rajesh  i am rajesh 
-  
-  </div><div>
-    i am rajesh   i am rajesh   i am rajesh  i am rajesh 
-    i am rajesh   i am rajesh   i am rajesh  i am rajesh 
-  
-    i am rajesh   i am rajesh   i am rajesh  i am rajesh 
-    i am rajesh   i am rajesh   i am rajesh  i am rajesh 
-    i am rajesh   i am rajesh   i am rajesh  i am rajesh 
-    i am rajesh   i am rajesh   i am rajesh  i am rajesh 
-  </div>
-    </div>
-    </main>
+  <div style={{height:'100vh',width:'100vw'}}>
+  <center>
+            <img
+              className="app__headerImage"
+              src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png"
+              alt=""
+            />
+          </center>
+          <form className='form'>
+           
+          <Input
+              type="text"
+              placeholder="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+              <Input
+              type="password"
+              placeholder="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+                 <Button
+              type="submit"
+              variant="contained"
+              color="primary"
+              disableElevation
+            >
+              Sign Up
+            </Button>
+            </form>
+          </div>
   </>
   );
 }
